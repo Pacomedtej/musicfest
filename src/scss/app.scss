@@ -1,6 +1,12 @@
-@import 'base/variables';
-@import 'contenido/contenido';
+
+@use 'base' as v;
+
+/*
+    SINTAXIS ANTIGUA
+
+    @import 'base/variables';
+*/
 
 body{
-    background-color: $rojo;
+    background-color: v.$verde;
 }

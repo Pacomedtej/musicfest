@@ -6,11 +6,13 @@ function tarea(done) {
 }
 
 const { src, dest, watch } = require("gulp"); // Extrae la funcionalidad de la carpeta gulp
-const sass = require("gulp-sass")(require("sass"))
+const sass = require("gulp-sass")(require("sass"));
+const plumber = require("gulp-plumber");
 
 function css(done){
 
     src("src/scss/app.scss") // Identificar el archivo SASS
+        .pipe(plumber())
         .pipe(sass()) // Compilarlo
         .pipe(dest("build/css")) // Almacenarlo en el disco duro
 
@@ -20,8 +22,10 @@ function css(done){
 }
 
 function dev(done){
-    watch("src/scss/app.scss", css);
+    // watch("src/scss/app.scss", css); // Watch para UN archivo scss
 
+    watch("src/scss/**/*.scss", css) // Watch para todas las carpetas y archivos scss
+    console.log("I´m using gulp!");
     done()
 }
 
