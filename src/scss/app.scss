@@ -1,12 +1,9 @@
 
-@use 'base' as v;
+@use 'base';
+@use 'layout';
 
 /*
     SINTAXIS ANTIGUA
 
     @import 'base/variables';
 */
-
-body{
-    background-color: v.$verde;
-}

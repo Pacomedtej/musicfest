@@ -1,2 +1,5 @@
+// El orden es importante porque de esa manera se compilan
 @forward '_variables.scss';
+@forward '_mixins.scss';
 @forward '_normalize.scss';
+@forward '_globales.scss';

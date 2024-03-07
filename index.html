@@ -12,6 +12,32 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <h1>¡Hola Mundo!</h1>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Rock & POP!</h1>
+
+            <nav class="navegacion-principal">
+                <a href="#">Line Up</a>
+                <a href="#">Galería</a>
+                <a href="#">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <h1 class="pruebaMixin">¡Primer Mixin!</h1> -->
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & POP!</h2>
+                <p>Octubre 15. Mérida, Yucatán.</p>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
 </body>
 </html>
