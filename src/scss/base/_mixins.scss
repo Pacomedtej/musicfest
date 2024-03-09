@@ -35,3 +35,16 @@
         @content;
     }
 }
+
+@mixin grid($columns, $gap){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center){
+    flex-direction: $direction;
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
